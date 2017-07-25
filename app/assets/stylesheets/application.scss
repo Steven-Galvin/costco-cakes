@@ -1,0 +1,38 @@
+$navbar-bg: #0073a6;
+$header-bg: #eee;
+
+$search: #3071a9;
+
+body {
+  margin: 0;
+}
+
+.header-wrapper {
+  background-color: $header-bg;
+  height: 128px;
+  width: 100vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  img {
+    height: 78.03px;
+  }
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    .header-search {
+      input {
+        width: 650px;
+        height: 40px;
+        border: 1px solid $search;
+      }
+    }
+  }
+}
+
+.navbar {
+  height: 49px;
+  width: 100vw;
+  background-color: $navbar-bg;
+}
