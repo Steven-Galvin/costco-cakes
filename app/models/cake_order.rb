@@ -1,0 +1,2 @@
+class CakeOrder < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class CakeDesign < ApplicationRecord
+end
