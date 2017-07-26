@@ -13,26 +13,27 @@
       <%= image_tag("costco_logo.png", alt: "Costco Logo") %>
       <div id="header-content">
         <div id="header-nav">
-          <div id="view-warehouse">
+          <div class="header-nav-content">
             <%= link_to "View Warehouse Savings", root_path %>
           </div>
-          <div id="find-warehouse">
+          <div class="header-nav-content">
             <%= link_to "Find a Warehouse", root_path %>
           </div>
-          <div id="get-email">
+          <div class="header-nav-content">
             <%= link_to "Get Email Offers", root_path %>
           </div>
-          <div id="customer-service">
+          <div class="header-nav-content">
             <%= link_to "Customer Service", root_path %>
           </div>
-          <div id="country">
+          <div class="header-nav-content">
 
           </div>
         </div>
         <div id="header-search">
           <input type="text" id="searchbar" placeholder="Search Costco">
           <div id="signin">
-            <%= link_to "Sign In / Register", new_user_session_path %>
+            <%= link_to "Sign In / Register", new_user_session_path if !current_user %>
+            <%= link_to "Log Out", destroy_user_session_path, method: :delete if current_user %>
           </div>
           <div id="cart">
             <%= link_to "Cart", root_path %>
@@ -45,10 +46,6 @@
   </div>
   <body>
 
-    <div class="cake-nav">
-      <%= link_to "Sign Up", new_user_registration_path %>
-      <%= link_to "Log Out", destroy_user_session_path, method: :delete if current_user %>
-    </div>
     <div class="content">
       <%= yield %>
     </div>
