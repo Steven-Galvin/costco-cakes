@@ -14,3 +14,15 @@
 //= require rails-ujs
 //= require_tree
 //= require bootstrap-sprockets
+
+function flavorSubmit(e) {
+  e.preventDefault();
+  console.log("hello");
+};
+
+
+$(function() {
+  $('.test').click(function() {
+    console.log("hello")
+  });
+});

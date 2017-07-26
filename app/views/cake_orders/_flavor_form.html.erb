@@ -1,0 +1,14 @@
+<%= f.radio_button(:cake_flavor, "vanilla", checked: true) %>
+<%= f.label(:vanilla, "Vanilla") %>
+<%= f.radio_button(:cake_flavor, "chocolate") %>
+<%= f.label(:chocolate, "chocolate") %>  <br><br>
+<%= f.radio_button(:mouse_flavor, "vanilla", checked: true) %>
+<%= f.label(:vanilla, "Vanilla") %>
+<%= f.radio_button(:mouse_flavor, "chocolate") %>
+<%= f.label(:chocolate, "chocolate") %>  <br><br>
+<%= f.radio_button(:cake_flavor, "vanilla", checked: true) %>
+<%= f.label(:vanilla, "Vanilla") %>
+<%= f.radio_button(:cake_flavor, "chocolate") %>
+<%= f.label(:chocolate, "chocolate") %>  <br><br>
+<%= link_to "Next", new_cake_order_path, class: test %>
+<%= link_to "Back", :back %>
