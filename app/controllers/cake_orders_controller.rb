@@ -10,7 +10,6 @@ class CakeOrdersController < ApplicationController
    def new
      @cake_order = CakeOrder.new
      @cake_designs = CakeDesign.all
-     @default = CakeDesign.find_by(name: "Default")
    end
 
    def create

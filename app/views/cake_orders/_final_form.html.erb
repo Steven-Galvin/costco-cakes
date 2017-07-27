@@ -1,0 +1,14 @@
+<%= f.label(:writing, "Writing") %>
+<%= f.text_field :writing, placeholder: "Add custom text" %>
+<%= f.label(:chocolate, "Chocolate Cake") %>  <br><br>
+<%= f.radio_button(:cake_flavor, "chocolate") %>
+<%= f.label(:vanilla, "Vanilla Mousse") %>
+<%= f.radio_button(:mouse_flavor, "vanilla", checked: true) %>
+<%= f.label(:chocolate, "Chocolate Mousse") %>  <br><br>
+<%= f.radio_button(:mouse_flavor, "chocolate") %>
+<%= f.label(:vanilla, "Vanilla Icing") %>
+<%= f.radio_button(:icing_flavor, "vanilla", checked: true) %>
+<%= f.label(:chocolate, "Chocolate Icing") %>  <br><br>
+<%= f.radio_button(:icing_flavor, "chocolate") %>
+<%= f.submit %>
+<a class="back-to-design-form">Next</a>

@@ -1,12 +1,13 @@
 <div class="cake-designs">
-  <%= image_tag(@default.image) %><br>
-  <%= f.label(:cake_design, @default.name) %>
-  <%= f.radio_button(:cake_design_id, @default.id) %>
   <% @cake_designs.each do |cake_design| %>
     <div class="cakes">
       <%= image_tag(cake_design.image) %><br>
       <%= f.label(:cake_design, cake_design.name) %>
       <%= f.radio_button(:cake_design_id, cake_design.id) %>
+      <% if cake_design.option != "" %>
+        <%= f.label(:cake_design_option, cake_design.option) %>
+        <%= f.text_field :option %>
+      <% end %>
     </div>
   <% end %>
 </div>

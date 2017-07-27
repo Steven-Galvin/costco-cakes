@@ -17,9 +17,19 @@
 
 $(function() {
   $('#design-form').hide();
+  $('#final-form').hide();
   $('.to-design-form').click(function() {
     $('#flavor-form').hide();
     $('#design-form').show();
-    console.log("hello")
+  });
+
+  $('.back-to-flavor-form').click(function() {
+    $('#design-form').hide();
+    $('#flavor-form').show();
+  });
+
+  $('.to-final-form').click(function() {
+    $('#design-form').hide();
+    $('#final-form').show();
   });
 });
