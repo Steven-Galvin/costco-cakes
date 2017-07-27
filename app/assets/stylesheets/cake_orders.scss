@@ -1,0 +1,11 @@
+.cake-designs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .cakes {
+    flex-basis: 30%;
+    img {
+      width: 300px;
+    }
+  }
+}

@@ -15,14 +15,11 @@
 //= require_tree
 //= require bootstrap-sprockets
 
-function flavorSubmit(e) {
-  e.preventDefault();
-  console.log("hello");
-};
-
-
 $(function() {
-  $('.test').click(function() {
+  $('#design-form').hide();
+  $('.to-design-form').click(function() {
+    $('#flavor-form').hide();
+    $('#design-form').show();
     console.log("hello")
   });
 });

@@ -1,5 +1,10 @@
 <%= form_for @cake_order do |f| %>
 
-<%= render "flavor_form", f: f %>
+<div id="flavor-form">
+  <%= render "flavor_form", f: f %>
+</div>
+<div id="design-form">
+  <%= render "design_form", f: f %>
+</div>
 
 <% end %>
