@@ -1,14 +1,54 @@
-<%= f.label(:writing, "Writing") %>
-<%= f.text_field :writing, placeholder: "Add custom text" %>
-<%= f.label(:chocolate, "Chocolate Cake") %>  <br><br>
-<%= f.radio_button(:cake_flavor, "chocolate") %>
-<%= f.label(:vanilla, "Vanilla Mousse") %>
-<%= f.radio_button(:mouse_flavor, "vanilla", checked: true) %>
-<%= f.label(:chocolate, "Chocolate Mousse") %>  <br><br>
-<%= f.radio_button(:mouse_flavor, "chocolate") %>
-<%= f.label(:vanilla, "Vanilla Icing") %>
-<%= f.radio_button(:icing_flavor, "vanilla", checked: true) %>
-<%= f.label(:chocolate, "Chocolate Icing") %>  <br><br>
-<%= f.radio_button(:icing_flavor, "chocolate") %>
+<div class="field">
+  <%= f.label "Writing" %><br />
+  <%= f.text_field :writing, placeholder: "Add custom writing" %>
+</div>
+
+<div class="field">
+  <%= f.label "Pick up date" %><br />
+  <%= f.date_field :pick_up_date, value: Time.now.tomorrow.strftime("%Y-%m-%d"), required: true %>
+</div>
+
+<div class="field">
+  <%= f.label "Pick up time" %><br />
+  <%= f.time_field :pick_up_time, min: "10:00:00", max: "20:00:00", value: "10:00:00", required: true %>
+</div>
+
+<div class="field">
+  <%= f.label "Pick a location" %><br />
+  <%= f.select :location, options_for_select([
+  ["Clackamas", "Clackamas"],
+  ["Portland", "Portland"],
+  ["Wilsonville", "Wilsonville"],
+  ["Tigard", "Tigard"],
+  ["Beaverton", "Beaverton"],
+  ["Hillsboro", "Hillsboro"]
+  ]) %>
+</div>
+
+<div class="field">
+  <%= f.label "If you have a reference picture, upload it here" %><br />
+  <%= f.file_field :photo %>
+</div>
+
+<div class="field">
+  <%= f.label "Any additional comments?" %><br />
+  <%= f.text_area :additional_comments, placeholder: "Let us know" %>
+</div>
+
+<% if current_user %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.hidden_field :member_name, :value => current_user.name %>
+  <%= f.hidden_field :member_number, :value => current_user.phone_number %>
+<% else %>
+  <div class="field">
+    <%= f.label "Your name" %><br />
+    <%= f.text_field :member_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Your number" %><br />
+    <%= f.text_field :member_number %>
+  </div>
+<% end %>
 <%= f.submit %>
-<a class="back-to-design-form">Next</a>
+<a class="back-to-design-form">Back</a>

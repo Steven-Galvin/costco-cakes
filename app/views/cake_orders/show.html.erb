@@ -1,0 +1,16 @@
+<div id="cake-info">
+  <%= @cake_order.cake_flavor %><br>
+  <%= @cake_order.icing_flavor %><br>
+  <%= @cake_order.mouse_flavor %><br>
+  <%= @cake_order.writing %><br>
+  <%= @cake_order.option %><br>
+  <%= @cake_order.additional_comments %><br>
+  <%= image_tag(@cake_order.photo) %><br>
+</div>
+
+<div id="pickup-info">
+  <%= @cake_order.member_name %><br>
+  <%= @cake_order.member_number %><br>
+  <%= @cake_order.pick_up_date.strftime("Pick up on %A %B %d, %Y") %><%= @cake_order.pick_up_time.strftime(" by %l:%M %P") %><br>
+  <%= @cake_order.location %><br>
+</div>

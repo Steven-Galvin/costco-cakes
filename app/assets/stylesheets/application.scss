@@ -6,6 +6,7 @@ $navbar-bg: #0073a6;
 $header-bg: #eee;
 $links: #0060a9;
 $search: #3071a9;
+$navbar-link: #ffffff;
 
 
 * {
@@ -16,6 +17,9 @@ $search: #3071a9;
 a {
   color: $links;
   text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 body {
@@ -23,6 +27,11 @@ body {
   padding: 0;
   width: 100vw;
   font-family: 'Roboto', sans-serif;
+}
+
+input::-ms-clear {
+    width: 0;
+    height: 0;
 }
 
 #header-wrapper {
@@ -95,10 +104,12 @@ body {
   display: flex;
   align-items: center;
   background-color: $navbar-bg;
+  a {
+    color: $navbar-link;
+  }
 }
 
 .content {
-  border: 1px solid black;
   margin: 10px;
   margin-left: 12.5%;
   margin-right: 12.5%;

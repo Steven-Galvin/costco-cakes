@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get 'home' => 'pages#home'
+  get 'all_orders' => 'pages#all_orders'
+  get 'orders' => 'pages#orders'
 
   resources :cake_orders
 end

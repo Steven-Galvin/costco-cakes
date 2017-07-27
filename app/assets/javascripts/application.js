@@ -32,4 +32,9 @@ $(function() {
     $('#design-form').hide();
     $('#final-form').show();
   });
+
+  $('.back-to-design-form').click(function() {
+    $('#final-form').hide();
+    $('#design-form').show();
+  });
 });

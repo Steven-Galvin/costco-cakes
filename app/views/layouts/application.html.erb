@@ -43,11 +43,19 @@
     </div>
   </div>
   <div id="navbar">
+    <div class="navbar-content">
+      <%= link_to "Admin", "/admin" if is_admin %>
+    </div>
+    <div class="navbar-content">
+      <%= link_to "All Orders", "/all_orders" if is_employee %>
+    </div>
+    <div class="navbar-content">
+      <%= link_to "View Orders", "/orders" if current_user %>
+    </div>
   </div>
   <body>
-
+    <%= flash[:notice] %>
     <div class="content">
-      <%= flash[:notice] %>
       <%= yield %>
     </div>
   </body>
