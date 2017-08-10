@@ -1,15 +1,19 @@
 <%= form_for @cake_order do |f| %>
 
-<div id="flavor-form">
-  <%= render "flavor_form", f: f %>
-</div>
+  <div id="flavor-form">
+    <%= render "flavor_form", f: f %>
+  </div>
 
-<div id="design-form">
-  <%= render "design_form", f: f %>
-</div>
+  <div id="design-form">
+    <%= render "design_form", f: f %>
+  </div>
 
-<div id="final-form">
-  <%= render "final_form", f: f %>
-</div>
+  <div id="final-form">
+    <%= render "final_form", f: f %>
+  </div>
+
+  <div id="confirmation">
+    <%= render "confirmation_form", f: f %>
+  </div>
 
 <% end %>

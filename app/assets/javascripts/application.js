@@ -37,4 +37,14 @@ $(function() {
     $('#final-form').hide();
     $('#design-form').show();
   });
+
+  $('.to-confirmation').click(function() {
+    $('#final-form').hide();
+    $('#confirmation').show();
+  });
+
+  $('.back-to-final-form').click(function() {
+    $('#confirmation').hide();
+    $('#final-form').show();
+  });
 });
