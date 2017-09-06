@@ -50,6 +50,7 @@ group :development, :test do
   gem 'capybara'
   gem 'faker'
   gem 'simplecov', require: false
+  gem "figaro"
 end
 
 group :development do
