@@ -1,11 +1,13 @@
 <div id="cake-info">
-  <%= @cake_order.cake_flavor %><br>
-  <%= @cake_order.icing_flavor %><br>
-  <%= @cake_order.mouse_flavor %><br>
+  <%= @cake_order.cake_flavor.capitalize %> cake<br>
+  <%= @cake_order.icing_flavor.capitalize %> icing<br>
+  <%= @cake_order.mouse_flavor.capitalize %> mousse<br>
   <%= @cake_order.writing %><br>
   <%= @cake_order.option %><br>
   <%= @cake_order.additional_comments %><br>
-  <%= image_tag(@cake_order.photo) %><br>
+  <% if @cake_order.photo %>
+    <%= image_tag(@cake_order.photo) %><br>
+  <% end %>
 </div>
 
 <div id="pickup-info">

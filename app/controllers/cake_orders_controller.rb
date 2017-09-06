@@ -17,7 +17,7 @@ class CakeOrdersController < ApplicationController
 
    def create
      @cake_order = CakeOrder.new(cake_order_params)
-     @confirmation = cake_order_params
+    #  @confirmation = cake_order_params
      params_check(@cake_order, cake_order_params)
      if @cake_order.save
      flash[:notice] = "Cake order successfully added!"
