@@ -1,4 +1,4 @@
-# Costco Custom Cake Ordering app
+# [Costco Custom Cake Ordering app](https://cake-orders.herokuapp.com/)
 ### Web app made for modernizing the way Costco handles its cake orders.
 ### Steven Galvin, July 24th, 2017
 [![Travis](https://img.shields.io/travis/rust-lang/rust.svg?style=plastic)](https://github.com/steven-galvin/costco-cakes)
