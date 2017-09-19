@@ -9,13 +9,18 @@
   </div>
 
   <div class="field">
-    <%= f.label :phone_number %><br />
-    <%= f.number_field :phone_number, min: 0, required: true %>
+    <%= f.label :email %><br />
+    <%= f.email_field :email, required: true %>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
+    <%= f.label :phone_number %><br />
+    <%= f.number_field :phone_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :member_number %><br />
+    <%= f.number_field :member_number, min: 0 %>
   </div>
 
   <div class="field">
