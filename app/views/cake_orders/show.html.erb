@@ -2,17 +2,25 @@
   <%= @cake_order.cake_flavor.capitalize %> cake<br>
   <%= @cake_order.icing_flavor.capitalize %> icing<br>
   <%= @cake_order.mouse_flavor.capitalize %> mousse<br>
+  <%= @cake_design.name %> <br>
+  <div class="order-image">
+    <%= image_tag(@cake_design.image) %>
+  </div>
   <%= @cake_order.writing %><br>
   <%= @cake_order.option %><br>
   <%= @cake_order.additional_comments %><br>
-  <% if @cake_order.photo %>
-    <%= image_tag(@cake_order.photo) %><br>
+  <% if @cake_order.photo? %>
+    <div class="order-image">
+      <%= image_tag(@cake_order.photo) %>
+    </div>
+  <% elsif %>
+    No Image
   <% end %>
 </div>
 
 <div id="pickup-info">
   <%= @cake_order.member_name %><br>
-  <%= @cake_order.member_number %><br>
+  <%= number_to_phone(@cake_order.member_number, area_code: true) %><br>
   <%= @cake_order.pick_up_date.strftime("Pick up on %A %B %d, %Y") %><%= @cake_order.pick_up_time.strftime(" by %l:%M %P") %><br>
   <%= @cake_order.location %><br>
 </div>

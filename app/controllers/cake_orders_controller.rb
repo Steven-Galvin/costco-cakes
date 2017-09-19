@@ -8,6 +8,7 @@ class CakeOrdersController < ApplicationController
 
   def show
     @cake_order = CakeOrder.find(params[:id])
+    @cake_design = CakeDesign.find(@cake_order.cake_design_id)
   end
 
    def new

@@ -1,7 +1,7 @@
 <div class="cake-designs">
   <% @cake_designs.each do |cake_design| %>
     <div class="cakes">
-      <%= image_tag(cake_design.image) %><br>
+      <%= image_tag(cake_design.image.url) %><br>
       <%= f.label(:cake_design, cake_design.name) %>
       <%= f.radio_button(:cake_design_id, cake_design.id) %>
       <% if cake_design.option != "" %>

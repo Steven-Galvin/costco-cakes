@@ -2,7 +2,8 @@ module ParamsCheck
   def params_check object, params
     params.each do |key, value|
       if object["#{key}"] === ""
-        object["#{key}"] = "No #{key}"
+        @sub = key.gsub(/_/, ' ')
+        object["#{key}"] = "No #{@sub}"
       end
     end
     params

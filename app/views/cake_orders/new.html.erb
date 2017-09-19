@@ -1,3 +1,7 @@
+<div class="content-header">
+  <h2>Cake Order Form</h2>
+</div>
+
 <%= form_for @cake_order do |f| %>
 
   <div id="flavor-form">
@@ -10,10 +14,6 @@
 
   <div id="final-form">
     <%= render "final_form", f: f %>
-  </div>
-
-  <div id="confirmation">
-    <%= render "confirmation_form", f: f %>
   </div>
 
 <% end %>

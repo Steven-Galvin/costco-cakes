@@ -1,14 +1,19 @@
-<%= f.radio_button(:cake_flavor, "vanilla", checked: true) %>
-<%= f.label(:vanilla, "Vanilla Cake") %>
+Cake Type: <br>
+<%= f.radio_button(:cake_flavor, "white", checked: true) %>
+<%= f.label(:white, "White Cake") %> <br>
 <%= f.radio_button(:cake_flavor, "chocolate") %>
 <%= f.label(:chocolate, "Chocolate Cake") %>  <br><br>
+
+Cake Filling: <br>
 <%= f.radio_button(:mouse_flavor, "vanilla", checked: true) %>
-<%= f.label(:vanilla, "Vanilla Mousse") %>
+<%= f.label(:vanilla, "Vanilla Cheesecake Mousse") %> <br>
 <%= f.radio_button(:mouse_flavor, "chocolate") %>
 <%= f.label(:chocolate, "Chocolate Mousse") %>  <br><br>
+
+Icing Flavor: <br>
 <%= f.radio_button(:icing_flavor, "vanilla", checked: true) %>
-<%= f.label(:vanilla, "Vanilla Icing") %>
+<%= f.label(:vanilla, "Vanilla Buttercream Icing") %> <br>
 <%= f.radio_button(:icing_flavor, "chocolate") %>
-<%= f.label(:chocolate, "Chocolate Icing") %>  <br><br>
+<%= f.label(:chocolate, "Chocolate Buttercream Icing") %>  <br><br>
 <a class="to-design-form">Next</a>
 <%= link_to "Back", :back %>
