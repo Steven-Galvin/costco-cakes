@@ -1,7 +1,7 @@
 <div class="orders">
   <% @orders.each do |order| %>
     <div class="order">
-      <%= order.pick_up_date.strftime("Pick up on %A %B %d, %Y") %><%= order.pick_up_time.strftime(" by %l:%M %P") %><br>
+      <%= link_to ("#{order.pick_up_date.strftime("Pick up on %A %B %d, %Y")}" "#{order.pick_up_time.strftime(" by %l:%M %P")}") %><br>
     </div>
   <% end %>
 </div>
