@@ -1,26 +1,26 @@
 <div id="cake-info">
-  <%= @cake_order.cake_flavor.capitalize %> cake<br>
-  <%= @cake_order.icing_flavor.capitalize %> icing<br>
-  <%= @cake_order.mouse_flavor.capitalize %> mousse<br>
-  <%= @cake_design.name %> <br>
+  <span class="cake_order_label">Cake Flavor:</span> <%= @cake_order.cake_flavor.capitalize %><br>
+  <span class="cake_order_label">Icing Flavor:</span> <%= @cake_order.icing_flavor.capitalize %><br>
+  <span class="cake_order_label">Mousse Flavor:</span> <%= @cake_order.mousse_flavor.capitalize %><br>
+  <span class="cake_order_label">Design:</span> <%= @cake_design.name %> <br>
   <div class="order-image">
     <%= image_tag(@cake_design.image) %>
   </div>
-  <%= @cake_order.writing %><br>
-  <%= @cake_order.option %><br>
-  <%= @cake_order.additional_comments %><br>
+  <span class="cake_order_label">Writing:</span> <%= @cake_order.writing %><br>
+  <% if @cake_order.option %>
+    <%= "<span class='cake_order_label'>#{@cake_design.option}</span> ".html_safe + @cake_order.option %><br>
+  <% end %>
+  <span class="cake_order_label">Additional Comments:</span> <%= @cake_order.additional_comments %><br>
   <% if @cake_order.photo? %>
     <div class="order-image">
-      <%= image_tag(@cake_order.photo) %>
+      <span class="cake_order_label">Reference Photo:</span> <%= image_tag(@cake_order.photo) %>
     </div>
-  <% elsif %>
-    No additional image
   <% end %>
 </div>
-
+<hr>
 <div id="pickup-info">
-  <%= @cake_order.member_name %><br>
-  <%= number_to_phone(@cake_order.member_number, area_code: true) %><br>
+  <span class="cake_order_label">Member Name:</span> <%= @cake_order.member_name %><br>
+  <span class="cake_order_label">Member Phone Number:</span> <%= number_to_phone(@cake_order.member_number, area_code: true) %><br>
   <%= @cake_order.pick_up_date.strftime("Pick up on %A %B %d, %Y") %><%= @cake_order.pick_up_time.strftime(" by %l:%M %P") %><br>
-  <%= @cake_order.location %><br>
+  <span class="cake_order_label">Store Location:</span> <%= @cake_order.location %><br>
 </div>
