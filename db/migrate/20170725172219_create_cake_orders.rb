@@ -7,7 +7,7 @@ class CreateCakeOrders < ActiveRecord::Migration[5.1]
 
       # Properties
       t.string :cake_flavor
-      t.string :mouse_flavor
+      t.string :mousse_flavor
       t.string :icing_flavor
       t.string :writing
       t.date :pick_up_date
