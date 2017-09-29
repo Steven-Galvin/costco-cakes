@@ -26,5 +26,8 @@
     <%= f.label(:chocolate, "Chocolate Buttercream Icing") %>
   </div>
 </div>
-<a class="to-design-form">Next</a>
-<%= link_to "Cancel", :back %>
+
+<div class="buttons">
+  <%= link_to "<button type='button' class='button'>Cancel</button>".html_safe, :back %>
+  <button type="button" class="to-design-form button">Next</button>
+</div>
