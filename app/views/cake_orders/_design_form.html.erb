@@ -1,3 +1,5 @@
+<h3>Choose a Design</h3>
+<br>
 <div class="cake-designs">
   <% @cake_designs.each do |cake_design| %>
     <div class="cakes">
@@ -11,5 +13,10 @@
     </div>
   <% end %>
 </div>
+<div class="field">
+  <%= f.label "Writing" %><br />
+  <%= f.text_field :writing, placeholder: "Add custom writing" %>
+</div>
 <a class="to-final-form">Next</a>
 <a class="back-to-flavor-form">Back</a>
+<%= link_to "Cancel", :back %>

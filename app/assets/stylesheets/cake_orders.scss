@@ -1,3 +1,5 @@
+$separator: #9A9DA1;
+
 .cake-designs {
   display: flex;
   flex-wrap: wrap;
@@ -12,4 +14,16 @@
 
 .cake_order_label {
   font-weight: bold;
+}
+
+#flavor_form {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  .flavor_field {
+    border-bottom: 1px solid $separator;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
 }

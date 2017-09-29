@@ -8,7 +8,7 @@
   </div>
   <span class="cake_order_label">Writing:</span> <%= @cake_order.writing %><br>
   <% if @cake_order.option %>
-    <%= "<span class='cake_order_label'>#{@cake_design.option}</span> ".html_safe + @cake_order.option %><br>
+    <%= "<span class='cake_order_label'>#{@cake_design.option}:</span> ".html_safe + @cake_order.option %><br>
   <% end %>
   <span class="cake_order_label">Additional Comments:</span> <%= @cake_order.additional_comments %><br>
   <% if @cake_order.photo? %>
