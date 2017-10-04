@@ -1,15 +1,38 @@
 $separator: #9A9DA1;
 
+textarea {
+  margin-top: 7px;
+  width: 100%;
+  resize: none;
+  height: 40px;
+  padding: 7px;
+  box-sizing: border-box;
+}
+
 .cake-designs {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 7px;
   img {
     width: 300px;
+    height: 175px;
   }
   .cakes {
     flex-basis: 30%;
   }
+}
+
+.field {
+  margin-bottom: 7px;
+}
+
+#additional-comments-field {
+  margin-top: 7px;
+}
+
+#cake-writing {
+  margin-top: 7px;
 }
 
 .cake_order_label {

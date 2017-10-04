@@ -1,4 +1,4 @@
-<h3>Choose a Design</h3>
+<h3>CHOOSE A DESIGN</h3>
 <br>
 <div class="cake-designs">
   <% @cake_designs.each do |cake_design| %>
@@ -13,9 +13,11 @@
     </div>
   <% end %>
 </div>
-<div class="field">
-  <%= f.label "Writing" %><br />
-  <%= f.text_field :writing, placeholder: "Add custom writing" %>
+<hr>
+<div id="cake-writing">
+  <%= f.label :writing, "CUSTOMIZE YOUR CAKE WITH A SPECIAL MESSAGE (OPTIONAL)" %><br />
+  <%= f.text_area :writing, placeholder: "Add custom writing" %>
+  <small>(35 characters or less)</small>
 </div>
 
 <div class="buttons">

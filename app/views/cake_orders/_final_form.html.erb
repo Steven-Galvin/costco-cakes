@@ -1,17 +1,17 @@
-<h3>Set Pickup Date, Time, and Location</h3>
+<h3>SET PICKUP DATE, TIME, AND LOCATION</h3>
 <br>
 <div class="field">
-  <%= f.label "Pick up date" %><br />
+  <%= f.label :pick_up_date, "DATE" %><br />
   <%= f.date_field :pick_up_date, value: Time.now.tomorrow.strftime("%Y-%m-%d"), required: true %>
 </div>
 
 <div class="field">
-  <%= f.label "Pick up time" %><br />
+  <%= f.label :pick_up_time, "TIME" %><br />
   <%= f.time_field :pick_up_time, min: "10:00:00", max: "20:00:00", value: "10:00:00", required: true %>
 </div>
 
 <div class="field">
-  <%= f.label "Pick a location" %><br />
+  <%= f.label :location, "LOCATION" %><br />
   <%= f.select :location, options_for_select([
   ["Clackamas", "Clackamas"],
   ["Portland", "Portland"],
@@ -23,12 +23,14 @@
 </div>
 
 <div class="field">
-  <%= f.label "If you have a reference picture, upload it here" %><br />
+  <%= f.label :photo, "REFERENCE PHOTO" %><br />
   <%= f.file_field :photo %>
 </div>
 
-<div class="field">
-  <%= f.label "Any additional comments?" %><br />
+<hr>
+
+<div id="additional-comments-field">
+  <%= f.label :additional_comments, "ADDITIONAL COMMENTS" %><br />
   <%= f.text_area :additional_comments, placeholder: "Let us know" %>
 </div>
 
@@ -38,14 +40,15 @@
   <%= f.hidden_field :member_number, :value => current_user.phone_number %>
 <% else %>
   <div class="field">
-    <%= f.label "Your name" %><br />
+    <%= f.label :member_name, "NAME" %><br />
     <%= f.text_field :member_name %>
   </div>
 
   <div class="field">
-    <%= f.label "Your number" %><br />
+    <%= f.label :member_number, "NUMBER" %><br />
     <%= f.text_field :member_number %>
   </div>
+
 <% end %>
 <div class="buttons">
   <%= f.submit class: "button" %>
