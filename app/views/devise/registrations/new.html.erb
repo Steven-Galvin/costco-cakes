@@ -1,4 +1,6 @@
-<h2>Sign up</h2>
+<h2>Sign Up</h2>
+
+Register a new Costco.com account.
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -37,7 +39,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: "button" %>
   </div>
 <% end %>
 

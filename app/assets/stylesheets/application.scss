@@ -35,6 +35,16 @@ input::-ms-clear {
     height: 0;
 }
 
+.button {
+  cursor: pointer;
+  padding: 7px;
+  font-size: 1.125rem;
+  padding: 5px;
+  color: white;
+  background-color: #3071a9;
+  border: 1px solid #cccccc;
+}
+
 #header-wrapper {
   background-color: $header-bg;
   height: 128px;
