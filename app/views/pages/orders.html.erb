@@ -1,7 +1,12 @@
+<h2>ORDERS</h2>
 <div class="orders">
-  <% @orders.each do |order| %>
-    <div class="order">
-      <%= link_to "#{order.pick_up_date.strftime("Pick up on %A %B %d, %Y")} #{order.pick_up_time.strftime(" by %l:%M %P")}", cake_order_path(order) %><br>
-    </div>
+  <% if @orders.present? %>
+    <% @orders.each do |order| %>
+      <div class="order">
+        <%= link_to "#{order.pick_up_date.strftime("Pick up on %A %B %d, %Y")} #{order.pick_up_time.strftime(" by %l:%M %P")}", cake_order_path(order) %><br>
+      </div>
+    <% end %>
+  <% else %>
+    There are no orders made yet.
   <% end %>
 </div>
