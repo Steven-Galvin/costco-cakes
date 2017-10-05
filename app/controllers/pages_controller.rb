@@ -8,10 +8,12 @@ class PagesController < ApplicationController
   end
 
   def all_orders
-    @orders = CakeOrder.all.order(:pick_up_date).order(:pick_up_time)
+    @orders = CakeOrder.where(done: false).order(:pick_up_date).order(:pick_up_time)
+    @completedOrders = CakeOrder.where(done: true).order(:pick_up_date).order(:pick_up_time)
   end
 
   def orders
-    @orders = CakeOrder.where(user_id: current_user.id).order(:pick_up_date).order(:pick_up_time)
+    @orders = CakeOrder.where(user_id: current_user.id, done: false).order(:pick_up_date).order(:pick_up_time)
+    @completedOrders = CakeOrder.where(user_id: current_user.id, done: true).order(:pick_up_date).order(:pick_up_time)
   end
 end

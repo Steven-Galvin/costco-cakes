@@ -7,6 +7,17 @@
       </div>
     <% end %>
   <% else %>
-    There are no orders made yet.
+    There are no orders yet.
+  <% end %>
+  <hr>
+  <h2>COMPLETED ORDERS</h2>
+  <% if @completedOrders.present? %>
+    <% @completedOrders.each do |order| %>
+      <div class="order">
+        <%= link_to "#{order.pick_up_date.strftime("Pick up on %A %B %d, %Y")} #{order.pick_up_time.strftime(" by %l:%M %P")}", cake_order_path(order) %><br>
+      </div>
+    <% end %>
+  <% else %>
+    No orders have been completed yet.
   <% end %>
 </div>

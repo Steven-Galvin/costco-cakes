@@ -20,7 +20,8 @@
 <hr>
 <div id="pickup-info">
   <span class="cake_order_label">Member Name:</span> <%= @cake_order.member_name %><br>
-  <span class="cake_order_label">Member Phone Number:</span> <%= number_to_phone(@cake_order.member_number, area_code: true) %><br>
+  <span class="cake_order_label">Member Number:</span> <%= @cake_order.member_number %><br>
+  <span class="cake_order_label">Member Phone Number:</span> <%= number_to_phone(@cake_order.member_phone_number, area_code: true) %><br>
   <%= @cake_order.pick_up_date.strftime("Pick up on %A %B %d, %Y") %><%= @cake_order.pick_up_time.strftime(" by %l:%M %P") %><br>
   <span class="cake_order_label">Store Location:</span> <%= @cake_order.location %><br>
 </div>

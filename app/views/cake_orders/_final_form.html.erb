@@ -37,7 +37,8 @@
 <% if current_user %>
   <%= f.hidden_field :user_id, :value => current_user.id %>
   <%= f.hidden_field :member_name, :value => current_user.name %>
-  <%= f.hidden_field :member_number, :value => current_user.phone_number %>
+  <%= f.hidden_field :member_number, :value => current_user.member_number %>
+  <%= f.hidden_field :member_phone_number, :value => current_user.phone_number %>
 <% else %>
   <div class="field">
     <%= f.label :member_name, "NAME" %><br />
@@ -45,7 +46,12 @@
   </div>
 
   <div class="field">
-    <%= f.label :member_number, "NUMBER" %><br />
+    <%= f.label :member_phone_number, "PHONE NUMBER" %><br />
+    <%= f.text_field :member_phone_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :member_number, "MEMBER NUMBER" %><br />
     <%= f.text_field :member_number %>
   </div>
 
