@@ -8,11 +8,18 @@ $links: #0060a9;
 $search: #3071a9;
 $navbar-link: #ffffff;
 $content-bg: #ebebeb;
+$footer-bg: #eee;
+$footer-links: #606060;
+$footer-content: #616161;
 
 
 * {
   margin: 0;
   padding: 0;
+}
+
+html {
+  min-height: 100%;
 }
 
 a {
@@ -139,4 +146,26 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+#footer {
+  background-color: $footer-bg;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: $footer-content;
+  #footer-links {
+    width: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    a {
+      color: $footer-links;
+    }
+  }
 }
