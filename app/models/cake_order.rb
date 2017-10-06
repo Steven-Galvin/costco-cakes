@@ -7,4 +7,5 @@ class CakeOrder < ApplicationRecord
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
   attr_accessor :delete_asset
   before_validation { self.asset.clear if self.delete_asset == '1' }
+  validates :member_name, :member_phone_number, :cake_design_id, presence: true
 end

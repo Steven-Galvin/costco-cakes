@@ -18,12 +18,13 @@ class CakeOrdersController < ApplicationController
 
    def create
      @cake_order = CakeOrder.new(cake_order_params)
-    #  @confirmation = cake_order_params
+     @cake_designs = CakeDesign.all
      params_check(@cake_order, cake_order_params)
      if @cake_order.save
-     flash[:notice] = "Cake order successfully added!"
+       flash[:notice] = "Cake order successfully added!"
        redirect_to  cake_order_path(@cake_order)
      else
+       flash[:notice] = "Please make sure all required information is filled out."
        render :new
      end
    end
