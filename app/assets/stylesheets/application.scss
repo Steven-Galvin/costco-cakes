@@ -11,6 +11,11 @@ $content-bg: #ebebeb;
 $footer-bg: #eee;
 $footer-links: #606060;
 $footer-content: #616161;
+$button-bg: #3071a9;
+$button-border: #cccccc;
+$btn-hvr-border: #9c9c9c;
+$btn-hvr-bg: #2a6293;
+
 
 
 * {
@@ -43,13 +48,16 @@ input::-ms-clear {
 }
 
 .button {
+  font-size: 15px !important;
   cursor: pointer;
   padding: 7px;
-  font-size: 1.125rem;
-  padding: 5px;
   color: white;
-  background-color: #3071a9;
-  border: 1px solid #cccccc;
+  background-color: $button-bg;
+  border: 1px solid $button-border;
+  &:hover {
+    background-color: $btn-hvr-bg;
+    border-color: $btn-hvr-border;
+  }
 }
 
 #header-wrapper {

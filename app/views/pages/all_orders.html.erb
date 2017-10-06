@@ -1,23 +1,27 @@
-<h2>ALL ORDERS</h2>
 <div class="orders">
-  <% if @orders.present? %>
-    <% @orders.each do |order| %>
-      <div class="order">
-        <%= link_to "#{order.pick_up_date.strftime("Pick up on %A %B %d, %Y")} #{order.pick_up_time.strftime(" by %l:%M %P")}", cake_order_path(order) %><br>
-      </div>
+  <div class="incomplete-orders">
+    <h2>ALL ORDERS</h2>
+    <% if @orders.present? %>
+      <% @orders.each do |order| %>
+        <div class="order">
+          <%= link_to "#{order.pick_up_date.strftime("Pick up on %A %B %d, %Y")} #{order.pick_up_time.strftime(" by %l:%M %P")}", cake_order_path(order) %><br>
+        </div>
+      <% end %>
+    <% else %>
+      There are no orders yet.
     <% end %>
-  <% else %>
-    There are no orders yet.
-  <% end %>
+  </div>
   <hr>
-  <h2>COMPLETED ORDERS</h2>
-  <% if @completedOrders.present? %>
-    <% @completedOrders.each do |order| %>
-      <div class="order">
-        <%= link_to "#{order.pick_up_date.strftime("Pick up on %A %B %d, %Y")} #{order.pick_up_time.strftime(" by %l:%M %P")}", cake_order_path(order) %><br>
-      </div>
+  <div class="complete-orders">
+    <h2>COMPLETED ORDERS</h2>
+    <% if @completedOrders.present? %>
+      <% @completedOrders.each do |order| %>
+        <div class="order">
+          <%= link_to "#{order.pick_up_date.strftime("Pick up on %A %B %d, %Y")} #{order.pick_up_time.strftime(" by %l:%M %P")}", cake_order_path(order) %><br>
+        </div>
+      <% end %>
+    <% else %>
+      No orders have been completed yet.
     <% end %>
-  <% else %>
-    No orders have been completed yet.
-  <% end %>
+  </div>
 </div>
