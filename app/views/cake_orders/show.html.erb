@@ -1,4 +1,10 @@
 <div id="cake-info">
+  <% if @cake_order.done %>
+    <h2>Cake Complete</h2>
+  <% else %>
+    <h2>Cake Incomplete</h2>
+  <% end %>
+  <br>
   <span class="cake_order_label">Cake Flavor:</span> <%= @cake_order.cake_flavor.capitalize %><br>
   <span class="cake_order_label">Icing Flavor:</span> <%= @cake_order.icing_flavor.capitalize %><br>
   <span class="cake_order_label">Mousse Flavor:</span> <%= @cake_order.mousse_flavor.capitalize %><br>
@@ -25,3 +31,18 @@
   <%= @cake_order.pick_up_date.strftime("Pick up on %A %B %d, %Y") %><%= @cake_order.pick_up_time.strftime(" by %l:%M %P") %><br>
   <span class="cake_order_label">Store Location:</span> <%= @cake_order.location %><br>
 </div>
+
+
+<% if current_user.admin || current_user.employee %>
+  <% if @cake_order.done? %>
+    <%= form_for @cake_order do |f| %>
+      <%= f.hidden_field :done, value: false %>
+      <%= f.submit 'Mark as incomplete', class: "button" %>
+    <% end %>
+  <% else %>
+    <%= form_for @cake_order do |f| %>
+      <%= f.hidden_field :done, value: true %>
+      <%= f.submit 'Mark as complete', class: "button" %>
+    <% end %>
+  <% end %>
+<% end %>
