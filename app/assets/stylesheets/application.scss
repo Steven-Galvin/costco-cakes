@@ -1,8 +1,9 @@
 //= require_tree
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 $navbar-bg: #0073a6;
+$navbar-bg2: #66abc9;
 $header-bg: #eee;
 $links: #0060a9;
 $search: #3071a9;
@@ -39,7 +40,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 input::-ms-clear {
@@ -131,6 +132,23 @@ input::-ms-clear {
   align-items: center;
   background-color: $navbar-bg;
   a {
+    color: $navbar-link;
+  }
+  .navbar-content {
+    margin-left: 10px;
+    margin-right: 15px;
+  }
+}
+
+#navbar2 {
+  height: 26px;
+  width: 100vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background-color: $navbar-bg2;
+  a {
+    font-size: 14px;
     color: $navbar-link;
   }
   .navbar-content {

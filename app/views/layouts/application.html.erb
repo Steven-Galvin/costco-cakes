@@ -44,15 +44,49 @@
   </div>
   <div id="navbar">
     <div class="navbar-content">
-      <%= link_to "Admin", "/admin" if is_admin %>
+      <%= link_to "Shop All Departments", root_path %>
     </div>
     <div class="navbar-content">
-      <%= link_to "All Orders", "/all_orders" if is_employee %>
+      <%= link_to "Grocery", "https://www.costco.com/grocery-household.html" %>
     </div>
     <div class="navbar-content">
-      <%= link_to "View Orders", "/orders" if current_user %>
+      <%= link_to "Business Delivery", "https://www.costcobusinessdelivery.com/" %>
+    </div>
+    <div class="navbar-content">
+      <%= link_to "Optical", "https://www.costco.com/optical.html" %>
+    </div>
+    <div class="navbar-content">
+      <%= link_to "Pharmacy", "https://www.costco.com/Pharmacy/home-delivery?storeId=10301&catalogId=10701&langId=-1" %>
+    </div>
+    <div class="navbar-content">
+      <%= link_to "Services", "https://www.costco.com/services.html" %>
+    </div>
+    <div class="navbar-content">
+      <%= link_to "Photo", "https://www.costcophotocenter.com/Home" %>
+    </div>
+    <div class="navbar-content">
+      <%= link_to "Travel", "https://www.costcotravel.com/?utm_source=costco.com&utm_medium=referral&utm_campaign=TopNav&utm_term=costcotravel.com&utm_content=20160621" %>
+    </div>
+    <div class="navbar-content">
+      <%= link_to "Membership", "https://www.costco.com/join-costco.html" %>
+    </div>
+    <div class="navbar-content">
+      <%= link_to "Location", "https://www.costco.com/warehouse-locations?langId=-1&storeId=10301&catalogId=10701" %>
     </div>
   </div>
+  <% if current_user %>
+    <div id="navbar2">
+      <div class="navbar-content">
+        <%= link_to "Admin", "/admin" if is_admin %>
+      </div>
+      <div class="navbar-content">
+        <%= link_to "All Orders", "/all_orders" if is_employee %>
+      </div>
+      <div class="navbar-content">
+        <%= link_to "View Orders", "/orders" if current_user %>
+      </div>
+    </div>
+  <% end %>
   <body>
     <div class="content">
       <%= flash[:notice] %>
